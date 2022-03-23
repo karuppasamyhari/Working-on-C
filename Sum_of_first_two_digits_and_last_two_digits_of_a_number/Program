@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main(){
+    int a,b,number,sum=0;
+    printf("Enter a number\n");
+    scanf("%d",&number);
+    b=number%100;
+    a=number/100;
+    printf("%d\t%d",a,b);
+    sum = a+b;
+    printf("\nThe sum of First two digits and last two digits of a four digit number is \"%d\"",sum);
+    return 0;
+}
