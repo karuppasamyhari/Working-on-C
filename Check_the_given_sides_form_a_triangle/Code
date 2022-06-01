@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+    int side1;
+    int side2;
+    int side3;
+    printf("Enter the length of three sides of a triangle");
+    scanf("%d %d %d",&side1,&side2,&side3);
+    if(side1+side2>side3&&side2+side3>side1&&side1+side3>side2){
+        printf("The given length of the sides forms a traiangle");
+    }
+    else{
+        printf("The given length of the sides does not forms a traiangle");
+    }
+    return EXIT_SUCCESS;
+}
