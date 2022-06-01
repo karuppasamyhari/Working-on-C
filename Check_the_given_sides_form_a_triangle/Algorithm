@@ -1,0 +1,6 @@
+STEP 1: Declare the variables.
+STEP 2: Initialize the variables.
+STEP 3: The summation can be done by arithmetic operator '+' .
+STEP 4: Do the summation of two sides and check with other one, and do it for all the three sides.
+STEP 5: Check the all the pair of two sides summation is greater with other using Logical and operation '&&'.
+STEP 6: If the condition satisfied, return TRUE, else FALSE.
