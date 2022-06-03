@@ -1,0 +1,41 @@
+/*
+First we can print the number in a specific pattern like 
+1 1 1 1 
+2 2 2 2
+3 3 3 3
+4 4 4 4
+Note that in our requirement there is additional one value added to the every row
+(i.e if we give the input as 4 then for odd index row plus one value is added to row
+number and it added at the end of the row. if it is even row plus one value is added to row 
+number and it added at the begining of the row.)
+1 1 1 1 2
+3 2 2 2 2
+3 3 3 3 4
+5 4 4 4 4
+  
+*/
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{	
+	int lin,col,n,num=1;
+	printf("Enter row size:");
+	scanf("%d",&n);
+	for(lin=1;lin<=n;num+=1,printf("\n"),lin+=1)
+	{
+	    if(lin%2==0)
+		{
+			printf("%d ",num+1);
+		}
+		for(col=1;col<=n;col+=1)
+		{
+			printf("%d ",num);
+		}
+		if(lin%2!=0)
+		{
+			printf("%d",num+1);
+		}
+
+	}
+	return EXIT_SUCCESS;
+}
