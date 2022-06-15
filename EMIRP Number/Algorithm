@@ -1,0 +1,9 @@
+STEP 1: Declare the required identifiers.
+STEP 2: Initialize the variables/identifiers
+STEP 3: Check the number which is greater than " 1 "
+STEP 4: Check the factors for the given number
+STEP 5: If the factors occurs more then two we can say the given number is not prime
+STEP 6: If only two factors occurs, it is prime number
+STEP 7: Reverse the given number
+STEP 8: Do the STEP 5 & STEP 6 again for the reversed number
+STEP 9: If two factors only occurs for the both given number and reversed number then we can say it is "EMIRP NUMBER" else "NOT EMIRP NUMBER"
