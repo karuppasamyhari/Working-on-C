@@ -1,0 +1,25 @@
+/*
+Print the below pattern
+
+11111
+22222
+33333
+44444
+55555
+*/
+
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+    int number;
+    int row;
+    int column;
+    scanf("%d",&number);
+    for(row = 1; row <= number; row += 1,printf("\n")){
+        for(column = 1; column <= number; column += 1){
+            printf("%d",row);
+        }
+    }
+    
+    return EXIT_SUCCESS;
+}
