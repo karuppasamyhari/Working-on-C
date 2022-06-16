@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    double number;
+    
+    scanf("%lf",&number);
+    printf("%0.2lf",number);
+
+    return EXIT_SUCCESS;
+}
