@@ -1,0 +1,23 @@
+/*
+1 
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+*/
+
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+    int number;
+    int row;
+    int col;
+    number = 5;
+    for(row = 1; row <= number; row += 1){
+        for(col = 1; col <= row; col += 1){
+        printf("%d ",col);
+        }
+    printf("\n");
+    }
+    return EXIT_SUCCESS;
+}
