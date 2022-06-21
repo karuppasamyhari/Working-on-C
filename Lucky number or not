@@ -1,0 +1,47 @@
+/*
+Lucky number is a number in which each of the digit in the number is different 
+like 1234 is a lucky number in this four digit number each digit is different (1,2,3,4) no digit is same 
+so we can say that 1234 is a lucky number. 1223 is not a lucky number because the digit '2' occurs
+more than one time.
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+# define MAX 50
+int main(){
+    int number;
+    int numberarray[MAX];
+    int copy_num;
+    int count;
+    int increment;
+    int increment2;
+    int increment3;
+    int flag;
+    count = 0;
+    flag = 0;
+    scanf("%d",&number);
+    copy_num = number;
+    while(copy_num != 0){
+        count += 1;
+        copy_num /= 10;
+    }
+    for(increment = 0; increment <count; increment += 1){
+        numberarray[increment] = number % 10;
+        number /= 10;
+    }
+
+    for( increment2 = 0; increment2 < count; increment2 += 1){
+        for(increment3 = increment2 + 1; increment3 < count; increment3 += 1){
+            if(numberarray[increment2] == numberarray[increment3]){
+                flag = flag + 1;
+            }
+        }
+    }
+    if(flag == 0){
+        printf("YES");
+    }
+    else{
+        printf("NO");
+    }
+    return EXIT_SUCCESS;
+}
