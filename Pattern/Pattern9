@@ -1,0 +1,65 @@
+/*
+7
+
+**          **
+***        ***
+****      ****
+*****    *****
+******  ******
+**************
+******  ******
+*****    *****
+****      ****
+***        ***
+**          **
+*            *
+
+*/
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+    int num;
+    int num1;
+    int num2;
+    int row;
+    int col;
+    int space;
+    scanf("%d",&num);
+    num1 = num;
+    num2 = 1;
+    for(row = 1; row <= num; row += 1){
+        for(col = 1; col <= row; col += 1){
+            printf("*");
+        }
+        for(space = 1; space <= num1 - 1; space += 1){
+            printf(" ");
+        }
+        for(space = num1 - 1; space >= 1; space -= 1){
+            printf(" ");
+        }
+        num1 = num1 - 1;
+        for(col = 1; col <= row; col += 1){
+            printf("*");
+        }
+        printf("\n");  
+    }
+    for(row = num - 1; row >= 1; row -= 1){
+            for(col = row; col >= 1; col -= 1){
+                printf("*");
+            }
+            for(space = 1; space <= num2 ; space += 1){
+                 printf(" ");
+            }
+            for(space = num2; space >= 1; space -= 1){
+                printf(" ");
+            }  
+            num2 = num2 + 1;
+            for(col = row; col >= 1; col -= 1){
+                printf("*");
+            }
+            printf("\n");
+
+        }
+
+    return EXIT_SUCCESS;
+}
