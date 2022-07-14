@@ -1,0 +1,46 @@
+//
+Hydrochloric Acid
+Hirolhcordyc Aicd 
+//
+
+#include <stdio.h>
+#include <stdlib.h>
+#include<string.h>
+int main(){
+    char str[100];
+    char str1[10][20];
+    char temp;
+    int i = 0;
+    int column = 0;
+    int row = 0;
+    int x;
+    int len;
+    scanf("%[^\n]*s",str);
+    for(i = 0; str[i] != '\0'; i += 1){
+        if(str[i] == ' '){
+            str1[row][column] = '\0'; //encounter the space means next word start and previous word finished 
+            row += 1;
+            column = 0; //'column' assignesd as '0' because it is a new line and first letter of the word
+        }
+        else{
+            str1[row][column] = str[i];
+            column += 1;// keep on changing until new word is arrive
+        }
+    }
+    str1[row][column] = '\0';
+
+    for(i = 0; i <= row; i += 1){
+        len = strlen(str1[i]);
+        for(column = 1 , x = len - 2; column < x; column += 1, x -= 1){
+            temp = str1[i][column];
+            str1[i][column] = str1[i][x];
+            str1[i][x] = temp;
+        }
+    }
+    
+    for(i = 0; i <= row; i += 1){
+        printf("%s ",str1[i]);
+    }
+
+    return EXIT_SUCCESS;
+}
