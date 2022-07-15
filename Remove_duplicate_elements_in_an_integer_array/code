@@ -1,0 +1,39 @@
+//
+size - 5
+elements(input) - 9 0 0 3 4
+output - 9 0 3 4
+//
+
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+    int a_rray[100];
+    int increment_1 = 0;
+    int increment_2;
+    int increment_3;
+    int len;
+   
+    scanf("%d",&len);
+
+    for(increment_1 = 0; increment_1 < len; increment_1 += 1){
+        scanf("%d",&a_rray[increment_1]);
+    }
+    
+    // In this loops and conditional statement we iterate through the elements and check the 
+    for(increment_1 = 0; increment_1 < len; increment_1 += 1){
+        for(increment_2 = increment_1 + 1; increment_2 < len; increment_2 +=1){
+            if(a_rray[increment_1] == a_rray[increment_2]){
+                for(increment_3 = increment_2; increment_3 < len;increment_3 += 1){
+                    a_rray[increment_3] = a_rray[increment_3 + 1];
+                }
+                len = len - 1;
+                increment_2 -= 1;
+            }
+        }
+    }
+    
+    for(increment_1 = 0; increment_1 < len; increment_1 += 1){
+        printf("%d ",a_rray[increment_1]);
+    }
+    return EXIT_SUCCESS;
+}
