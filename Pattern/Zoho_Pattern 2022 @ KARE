@@ -1,0 +1,38 @@
+/*
+THIS IS THE PATERN YOU SHOULD PRINT 
+GIVEN INPUT = 4
+             0
+         2 1 0 1 2
+     4 3 2 1 0 1 2 3 4
+ 6 5 4 3 2 1 0 1 2 3 4 5 6
+ 
+*/
+
+
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+    int number;
+    number = 4;
+    int row, col, space;
+    int ending_col = number * 2;
+    int ending_space = (number * 2) - 2;
+    int format = ending_col;
+    for(row = 1; row <= number; row += 1){
+        for(space = ending_space; space >= 1; space -= 1){
+            printf("  ");
+        }
+        for(col = format - ending_col; col >= 0; col -= 1){
+            printf(" %d",col);
+        }
+        for(col = 1; col <= format - ending_col; col += 1){
+            printf(" %d",col);
+        }
+        for(space = ending_space; space >= 1; space -= 1){
+            printf("  ");
+        }
+        format += 2;
+        ending_space -= 2;
+        printf("\n");
+    }
+}
